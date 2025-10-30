@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Plan Do Launch — SaaS Onboarding Frameworks for Scalable Growth</title>
+    <meta property="og:title" content="Plan Do Launch — Proven Onboarding Frameworks for SaaS &amp; Compliance Teams">
+    <meta name="description" content="Plan Do Launch helps SaaS and compliance teams scale faster with proven onboarding frameworks, playbooks, and lightweight portals that reduce time-to-onboard by up to 40% while increasing team capacity 3×.">
+    <meta property="og:description" content="From chaos to repeatable onboarding. Plan Do Launch designs playbooks, portals, and frameworks that scale clients and teams without friction.
+">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top py-3 navbar-dark pdl-hero" role="navigation" aria-label="Primary">
+        <div class="container"><a class="navbar-brand fw-bold text-white" href="#top"><img class="img-fluid" src="assets/img/plandolaunch.png" width="175" height="175"></a><button data-bs-toggle="collapse" data-bs-target="#pdlNav" class="navbar-toggler border-0" type="button" aria-controls="pdlNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="pdlNav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#problem">Problem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guide">Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plan">Plan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#success">Results</a></li>
+                    <li class="nav-item"><a class="btn ms-lg-2 px-3 pdl-btn text-white" role="button" href="#contact">Book a Discovery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><!-- InvestorCOM Chat Widget -->
+<div class="container my-5" id="ic-chat">
+  <div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">InvestorCOM Support</h5>
+      <small>RolloverAnalyzer • PeerCompare</small>
+    </div>
+    <div class="card-body">
+      <div id="chat" class="border rounded p-3 mb-3" style="height:360px; overflow:auto; background:#fff;"></div>
+
+      <form id="ask" class="d-flex gap-2">
+        <input id="q" type="text" class="form-control" placeholder="Ask a question…" autocomplete="off">
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Local testing (we’ll swap to your Worker URL after this step)
+  const API = "http://localhost:8787/api/ask-john";
+
+  const chat = document.getElementById('chat');
+  const form = document.getElementById('ask');
+  const q    = document.getElementById('q');
+
+  if (!chat || !form || !q) {
+    console.error('Missing chat/form/q elements. Check IDs.');
+    return;
+  }
+
+  let conversationId = null;
+
+  function add(role, text) {
+    const div = document.createElement('div');
+    div.classList.add('mb-2');
+    div.innerHTML = `<strong>${role}:</strong> ${String(text ?? '').replace(/</g,'&lt;')}`;
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const question = q.value.trim();
+    if (!question) return;
+
+    add('You', question);
+    q.value = '';
+
+    try {
+      const r = await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type':'application/json' },
+        body: JSON.stringify({ question, conversationId })
+      });
+
+      if (!r.ok) {
+        const txt = await r.text();
+        add('Agent', `Error (${r.status}): ${txt.slice(0,200)}`);
+        return;
+      }
+
+      const data = await r.json();
+      if (data.error) { add('Agent', `Error: ${data.error}`); return; }
+
+      add('Agent', data.text || '(no text)');
+      if (data.conversationId) conversationId = data.conversationId;
+      if (Array.isArray(data.citations) && data.citations.length) {
+        add('Agent', 'Sources: ' + data.citations.map(c => c.filename || c.file_id || 'doc').join(', '));
+      }
+    } catch (err) {
+      add('Agent', 'Network error: ' + err.message);
+    }
+  });
+});
+</script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
