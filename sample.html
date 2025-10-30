@@ -91,11 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
         add('Agent', `Error (${r.status}): ${txt.slice(0,200)}`);
         return;
       }
-
       const data = await r.json();
       if (data.error) { add('Agent', `Error: ${data.error}`); return; }
-
       add('Agent', data.text || '(no text)');
+
       if (data.conversationId) conversationId = data.conversationId;
       if (Array.isArray(data.citations) && data.citations.length) {
         add('Agent', 'Sources: ' + data.citations.map(c => c.filename || c.file_id || 'doc').join(', '));
