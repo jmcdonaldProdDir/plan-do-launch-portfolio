@@ -3,61 +3,314 @@
 
 <head>
     <meta charset="utf-8">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plan Do Launch",
+  "url": "https://plandolaunch.com",
+  "logo": "https://plandolaunch.com/plandolaunch.png",
+  "description": "AI-enabled SaaS onboarding frameworks, portals, and delivery copilots.",
+  "founder": {
+    "@type": "Person",
+    "name": "John A. McDonald"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@plandolaunch.com"
+  }
+}
+</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Product Innovation Playbook</title>
+    <title>Plan Do Launch — SaaS Onboarding Frameworks for Scalable Growth</title>
+    <meta property="og:title" content="Plan Do Launch — AI-Enabled SaaS Onboarding Frameworks for Scalable Growth">
+    <meta name="description" content="Plan Do Launch helps SaaS and compliance teams scale faster with AI-enabled onboarding frameworks, playbooks, and lightweight portals that reduce time-to-onboard by up to 40% while increasing team capacity 3×.">
+    <meta property="og:description" content="From chaos to repeatable onboarding. Plan Do Launch designs AI-enabled playbooks, portals, and frameworks that scale clients and teams without friction.">
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Plan Do Launch",
+            "url": "https://plandolaunch.com"
+        }
+    </script>
+    <link rel="icon" type="image/png" sizes="1024x1024" href="assets/img/favicon.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="assets/css/onboarding.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-light border-bottom">
-        <div class="container"><a class="navbar-brand fw-semibold" href="/">Playbook</a></div>
-    </nav>
-    <main class="my-5 container" style="max-width:860px;">
-        <header class="mb-4">
-            <h1 class="h2">Free Product Innovation Playbook</h1>
-            <p class="text-muted mb-0">PMBOK-style, SaaS-friendly. Get the PDF + templates by email.</p>
-        </header>
-        <div class="row g-4">
-            <div class="col-12 col-lg-7">
-                <form class="shadow-sm card" id="lead" method="post" action="/api/subscribe">
-                    <div class="card-body">
-                        <div class="mb-3"><label class="form-label">Name</label><input name="first_name" class="form-control" required=""></div>
-                        <div class="mb-3"><label class="form-label">Company</label><input name="company" class="form-control"></div>
-                        <div class="mb-3"><label class="form-label">Email</label><input class="form-control form-control" type="email" name="email" required=""></div>
-                        <div class="mb-3 form-text"><span> By submitting, you agree to receive the playbook and occasional updates. Unsubscribe anytime. </span></div><button class="btn btn-primary w-100" type="submit">Email me the Playbook</button>
-                    </div>
-                </form>
-                <div class="alert alert-success d-none mt-3" role="alert" id="ok"><span>Thanks—check your inbox to confirm your email.</span></div>
-                <div class="alert alert-danger d-none mt-3" role="alert" id="err"><span>Sorry, something went wrong. Please try again.</span></div>
+<body><a class="visually-hidden-focusable" href="#main">Skip to main content</a>
+    <nav class="navbar navbar-expand-lg sticky-top py-3 navbar-dark pdl-hero" role="navigation" aria-label="Main navigation">
+        <div class="container"><a class="navbar-brand fw-bold text-white" href="#top"><img class="img-fluid" src="assets/img/plandolaunch.png" width="175" height="175" alt="Plan Do Launch logo" loading="eager"></a><button data-bs-toggle="collapse" data-bs-target="#pdlNav" class="navbar-toggler border-0" type="button" aria-controls="pdlNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="pdlNav">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#problem">Problem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guide">Guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plan">Plan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#success">Results</a></li>
+                    <li class="nav-item"><a class="btn ms-lg-2 px-3 py-2 pdl-btn text-white" role="button" href="#contact">Book a Discovery</a></li>
+                </ul>
             </div>
-            <div class="col-12 col-lg-5">
-                <div class="card h-100 shadow-sm">
-                    <div class="card-body">
-                        <h2 class="h5">What you get</h2>
-                        <ul class="mb-0">
-                            <li>Playbook PDF</li>
-                            <li>RICE worksheet (xlsx)</li>
-                            <li>PRD template (md)</li>
-                            <li>Phase checklists</li>
-                        </ul>
+        </div>
+    </nav>
+    <header class="py-5 pdl-hero py-lg-6" id="top">
+        <div class="container py-4">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7"><span class="badge rounded-pill mb-3 px-3 py-2 badge-soft">Human-first, AI-enabled onboarding systems</span>
+                    <h1 class="display-4 fw-bold mb-3">Stop losing clients to broken onboarding.</h1>
+                    <p class="lead mb-4">Your team is exhausted, your processes are duct-taped, and scaling feels impossible.&nbsp;We design <strong>AI-enabled onboarding systems</strong> that turn chaos into a repeatable,&nbsp;trackable experience – for your clients and your people.</p>
+                    <div class="d-flex flex-wrap gap-3"><a class="btn btn-lg py-2 pdl-btn text-white" role="button" href="#contact">Book a Discovery Session</a><a class="btn btn-outline-light btn-lg" role="button" href="#plan">See the Proven Process</a></div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-light bg-opacity-10 p-4 pdl-outline rounded-3">
+                        <h5 class="fw-bold mb-3">Brand Promise</h5>
+                        <p class="mb-0">After working with <strong>Plan Do Launch</strong>, you’ll be able to<br><em>exponentially expand delivery lines and staff — without breaking your systems or your people.&nbsp;</em>We combine <strong>proven onboarding frameworks, portals, and AI copilots</strong> so your&nbsp;team can deliver at scale.</p>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <section id="problem" class="py-6">
+            <div class="container">
+                <div class="row align-items-start g-4">
+                    <div class="col-lg-6">
+                        <h2 class="mb-3 pdl-section-title h1">The truth: most onboarding fails before it even starts.</h2>
+                        <p class="mb-4 pdl-sub">You’ve nailed your sales pitch — but when it’s time to deliver, everything slows down. Every new client feels like a custom project. Documentation is missing. Your best people are burning out. Growth doesn’t stall because of sales — it stalls because delivery can’t keep up.</p>
+                        <div class="d-grid gap-2">
+                            <div class="d-flex align-items-start p-3 gap-3 pdl-outline">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Inconsistent, undocumented, manual.</strong><br><span class="pdl-sub">Onboarding depends on tribal knowledge and heroics.</span></div>
+                            </div>
+                            <div class="d-flex align-items-start p-3 gap-3 pdl-outline">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Sales promise ≠ delivery reality.</strong><br><span class="pdl-sub">Confidence erodes when teams can’t keep pace.</span></div>
+                            </div>
+                            <div class="d-flex align-items-start p-3 gap-3 pdl-outline">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Hiring isn’t scaling.</strong><br><span class="pdl-sub">Without a system, new staff add chaos, not capacity.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ms-lg-auto">
+                        <div class="p-4 pdl-outline rounded-3">
+                            <h5 class="fw-bold mb-3">Punch in the gut</h5>
+                            <ul class="list-unstyled m-0">
+                                <li class="mb-3"><strong>Why onboarding fails:</strong> It starts too late. Adoption of the process starts at the sale.</li>
+                                <li class="mb-3"><strong>The biggest lie about scaling:</strong> “We’re scalable.” (Without a documented system, you’re not.)</li>
+                                <li class="mb-0"><strong>The hardest step:</strong> Documentation. Painful — and critical. We push you through it.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="turningpoint">
+            <div class="container">
+                <div class="row gy-5 align-items-center">
+                    <div class="col-12 col-lg-7 col-xl-6">
+                        <h2 class="mb-3 pdl-section-title h1"><strong>The Turning Point: Building a Scalable Onboarding Portal</strong></h2>
+                        <p class="mb-4 pdl-sub"> The real transformation happens when onboarding moves from ad-hoc documents and meetings to a <strong>centralized, self-serve portal</strong> — a single place where both clients and team members can access everything they need to succeed, supported by <strong>AI copilots trained on your own content</strong>.</p>
+                        <ul class="pdl-sub">
+                            <li>Clients self-serve onboarding and support content at their own pace with an AI Q&amp;A copilot.</li>
+                            <li>Teams ramp faster using an internal AI assistant for SOPs, edge cases, and checklists.</li>
+                            <li>Leadership gains visibility into progress, risks, and adoption with AI-assisted reporting.</li>
+                        </ul>
+                        <p class="mb-4 pdl-sub">When onboarding lives inside a structured, accessible system — instead of in people’s heads or scattered files — growth becomes predictable.</p>
+                        <p class="mb-4 pdl-sub">This is the foundation of Plan Do Launch: turning onboarding chaos into a repeatable, scalable process.</p>
+                        <p class="mb-4 pdl-sub">Failing to implement a centralized system isn’t just an operational miss — it’s the reason most companies struggle to scale.</p>
+                    </div>
+                    <div class="col"><img class="img-fluid" width="2838" height="1376" src="assets/img/clipboard-image-1.png" alt="Example of a centralized onboarding portal interface" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-light py-6" id="guide">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <h2 class="mb-3 pdl-section-title h1">You don’t need another advisor. You need someone who’s built the system.</h2>
+                        <p class="mb-4 pdl-sub">I’m <strong>John A. McDonald</strong>, founder of <strong>Plan Do Launch</strong>. I’ve lived the chaos of onboarding inside real SaaS and compliance companies — as a developer, business analyst, project manager, and consultant in one.</p>
+                        <div class="bg-white p-4 pdl-outline rounded-3"><strong>Authority:</strong>
+                            <ul class="mt-2 mb-0">
+                                <li>Proven frameworks used in financial/compliance environments</li>
+                                <li>BA, PM, and developer skillset — we design, build, and implement</li>
+                                <li>Deliverables: playbooks, workflows, automation, training assets</li>
+                                <li>AI-enabled portals and agents trained on your onboarding content (not generic internet data)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ms-lg-auto">
+                        <div class="p-4 pdl-outline rounded-3"><span class="badge text-dark bg-dark-subtle mb-2">Credibility</span>
+                            <h5 class="fw-bold">Results over reports</h5>
+                            <p class="mb-0 pdl-sub">We don’t deliver shelf-ware. We ship a working onboarding system your team can run — and grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="plan" class="py-6">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-lg-8">
+                        <h2 class="mb-2 pdl-section-title h1">The Plan → Do → Launch Method</h2>
+                        <p class="pdl-sub">Simple. Documented. Repeatable. Built to scale clients and teams without breaking your people, whether you’re running a SaaS onboarding team or a compliance implementation function.</p>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="bg-light h-100 p-4 rounded-3 pdl-plan-step">
+                            <h5 class="fw-bold">1) Plan</h5>
+                            <p class="mb-3 pdl-sub">Map current onboarding, expose bottlenecks, define the blueprint.</p>
+                            <ul class="mb-0">
+                                <li>Process mapping &amp; gap analysis</li>
+                                <li>Roles, RACI, SLAs</li>
+                                <li>Success metrics defined</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bg-light h-100 p-4 rounded-3 pdl-plan-step">
+                            <h5 class="fw-bold">2) Do</h5>
+                            <p class="mb-3 pdl-sub">Build the assets that make scaling real.</p>
+                            <ul class="mb-0">
+                                <li>Playbooks, SOPs, checklists</li>
+                                <li>User guides &amp; training videos</li>
+                                <li>Workflow &amp; automation setup</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="bg-light h-100 p-4 rounded-3 pdl-plan-step">
+                            <h5 class="fw-bold">3) Launch</h5>
+                            <p class="mb-3 pdl-sub">Implement, train, and hand over with confidence.</p>
+                            <ul class="mb-0">
+                                <li>Pilot &amp; iterate</li>
+                                <li>Team training &amp; enablement</li>
+                                <li>Scale-out playbook</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-5"><a class="btn btn-lg py-2 pdl-btn text-white" role="button" href="#contact">Start with a Discovery Session</a></div>
+            </div>
+        </section>
+        <section id="AI-Onboarding">
+            <section class="bg-light py-6" id="ai">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-lg-8">
+                            <h2 class="mb-2 pdl-section-title h1">Where AI fits in your onboarding system</h2>
+                            <p class="pdl-sub">We don’t bolt on a chatbot and call it innovation. We design AI-enabled client onboarding portals and copilots that actually reduce friction — always inside a documented, human-first process.</p>
+                        </div>
+                    </div>
+                    <div class="row g-4">
+                        <div class="col-lg-4">
+                            <div class="bg-white rounded-3 h-100 p-4 pdl-outline">
+                                <h5 class="fw-bold">Client Copilot</h5>
+                                <p class="mb-0 pdl-sub"> An AI assistant embedded in your onboarding portal, trained on your guides, FAQs, and policies so clients get instant, accurate answers 24/7. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="bg-white rounded-3 h-100 p-4 pdl-outline">
+                                <h5 class="fw-bold">Delivery Copilot</h5>
+                                <p class="mb-0 pdl-sub"> Internal AI assistant for your team: “How do we handle X scenario?” “What’s the checklist for Y integration?” Answers grounded in your SOPs and playbooks. </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="bg-white rounded-3 h-100 p-4 pdl-outline">
+                                <h5 class="fw-bold">Automation &amp; Reporting</h5>
+                                <p class="mb-0 pdl-sub"> AI-assisted summaries of onboarding calls, status reports, and risk flags — so leadership sees issues before they become escalations. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="success" class="py-6">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-6">
+                        <h2 class="mb-3 pdl-section-title h1">What success looks like</h2>
+                        <div class="d-grid gap-3">
+                            <div class="bg-white d-flex p-3 gap-3 pdl-outline rounded-3">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Predictable onboarding.</strong><br><span class="pdl-sub">Every client follows the same high-quality path.</span></div>
+                            </div>
+                            <div class="bg-white d-flex p-3 gap-3 pdl-outline rounded-3">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Faster team ramp.</strong><br><span class="pdl-sub">New staff onboard in days, not months.</span></div>
+                            </div>
+                            <div class="bg-white d-flex p-3 gap-3 pdl-outline rounded-3">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Sales ↔ delivery parity.</strong><br><span class="pdl-sub">You deliver what you sell — at scale.</span></div>
+                            </div>
+                            <div class="bg-white d-flex p-3 gap-3 pdl-outline rounded-3">
+                                <div class="mt-1 pdl-check" aria-hidden="true"></div>
+                                <div><strong>Exponential capacity.</strong><br><span class="pdl-sub">Expand delivery lines and staff without chaos.</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 ms-lg-auto">
+                        <div class="p-4 pdl-outline rounded-3">
+                            <h5 class="fw-bold mb-2">If you don’t act</h5>
+                            <ul class="mb-0 pdl-sub">
+                                <li class="mb-2">Firefighting never stops</li>
+                                <li class="mb-2">Clients keep waiting</li>
+                                <li class="mb-0">Growth keeps choking on delivery</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="py-6 pdl-cta">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <h2 class="mb-3 pdl-section-title h1">It’s time to scale with systems — not stress</h2>
+                        <p class="mb-4 pdl-sub">Book a 30-minute discovery session. We’ll identify your top onboarding bottlenecks and outline the fastest path to a scalable delivery machine.</p>
+                        <p class="mb-4 pdl-sub">Curious how AI copilots could support your onboarding team? We’ll show live examples on the call.</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><strong>Email:</strong> info@plandolaunch.com</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <form class="bg-white p-4 pdl-outline rounded-3" aria-label="Contact form" data-bss-recipient="6fa0bd50d78ed0926775df72452f18f6" data-bss-subject="Request for Discovery has been sent">
+                            <div class="mb-3"><label class="form-label" for="name">Name</label><input class="form-control form-control" type="text" autocomplete="name" id="name" name="name" placeholder="Your name" required=""></div>
+                            <div class="mb-3"><label class="form-label" for="email">Work Email</label><input class="form-control form-control" type="email" autocomplete="email" id="email" name="email" placeholder="you@company.com" required=""></div>
+                            <div class="mb-3"><label class="form-label" for="company">Company</label><input class="form-control form-control" type="text" autocomplete="organization" id="company" name="company" placeholder="Company Inc."></div>
+                            <div class="mb-3"><label class="form-label" for="msg">What’s the biggest onboarding bottleneck?</label><textarea class="form-control form-control" id="msg" name="message" placeholder="Describe your challenge…" required="" rows="4"></textarea></div><button class="btn w-100 py-2 pdl-btn text-white" type="submit">Request Discovery Session</button>
+                            <div class="mt-2 form-text"><span>By submitting, you agree to be contacted about this request.</span></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="py-5 pdl-footer">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col">
+                    <div class="fw-bold"><span>Plan Do Launch</span></div>
+                    <div class="small"><span>Proven frameworks to scale your clients, your team, and your growth.</span></div>
+                </div>
+                <div class="col text-lg-end small"><span> © </span><span id="pdlYear"></span><span> Plan Do Launch. All rights reserved. </span></div>
+            </div>
         </div>
-    </main><script>
-document.getElementById('lead').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const fd = new FormData(e.target);
-  const r = await fetch('/api/subscribe', { method: 'POST', body: fd });
-  if (r.status === 204) {
-    document.getElementById('ok').classList.remove('d-none');
-  } else {
-    document.getElementById('err').classList.remove('d-none');
-  }
-});
+    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script>
+  document.getElementById('pdlYear').textContent=new Date().getFullYear();
 </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plan Do Launch",
+  "url": "https://plandolaunch.com",
+  "logo": "https://plandolaunch.com/plandolaunch.png",
+  "description": "AI-enabled SaaS onboarding frameworks, portals, and delivery copilots.",
+  "founder": {
+    "@type": "Person",
+    "name": "John A. McDonald"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@plandolaunch.com"
+  }
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>PeerCompare Configurations</title>
+    <meta name="description" content="Plan Do Launch helps SaaS and compliance teams scale onboarding with AI-enabled frameworks, client portals, and delivery copilots. Reduce time-to-onboard, increase team capacity, and turn onboarding chaos into a repeatable system.">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #005487;border-bottom: 1px solid lightgray;">
+        <div class="container-fluid"><a class="navbar-brand" href="../index.html"><img src="../assets/img/logo-investorcom-reverse-2x.png" height="30px"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="rolloveranalyzer-onboarding.html">RolloverAnalyzer&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="rolloveranalyzer-onboarding.html">Onboarding&nbsp;</a><a class="dropdown-item" href="client-profile.html">Client Profile</a><a class="dropdown-item" href="account-type-config.html">Account Types</a><a class="dropdown-item" href="plan-2-plan.html">Plan to Plan</a><a class="dropdown-item" href="plan-2-ira.html">Plan to IRA</a><a class="dropdown-item" href="ira-2-ira.html">IRA to IRA</a></div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">PeerCompare&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="peercompare-onboarding.html">Onboarding</a><a class="dropdown-item" href="peer-compare-config.html">Configurations</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="account-compare.html">AccountCompare</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Single Sign On (SSO)</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="sso-integration-summary.html">SSO Integration Summary</a><a class="dropdown-item" href="sso-integration.html">SSO Integration</a><a class="dropdown-item" href="federated-identity-saml.html">Federated Identity (SAML)</a><a class="dropdown-item" href="federated-identity-oidc.html">Federated Identity (OIDC)</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="onboarding-library.html">Onboarding Library</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" role="button" href="support.html">SUPPORT</a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-xxl-2" style="background: whitesmoke;">
+                <ul>
+                    <li style="list-style: none;margin-top: 25px;font-weight: 500;">PEERCOMPARE CONFIGURATIONS</li>
+                    <li><a href="peer-compare-config.html">System Configurations</a></li>
+                    <li style="list-style: none;margin-top: 25px;font-weight: 500;">PRODUCT SHELF HELPER FILES</li>
+                    <li><a href="https://cpotraining.investorcom.com/shelf-tools/ca-product-shelf-template.csv"><span style="color: var(--bs-link-color);">CA Product shelf template&nbsp;</span><i class="fas fa-file-excel"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/shelf-tools/us-product-shelf-template.csv">US Product shelf template&nbsp;<i class="fas fa-file-excel"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/shelf-tools/datapoint-list.xlsx">Datapoint list (all products/languages)&nbsp;<i class="fas fa-file-excel"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/shelf-tools/va-datapoints-2022-10-21.xlsx">Variable annunities datapoints&nbsp;<i class="fas fa-file-excel"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/shelf-tools/consolidated-data-dictionary.xlsx">Consolidated Data Dictionary&nbsp;<i class="fas fa-file-excel"></i></a></li>
+                    <li style="list-style: none;margin-top: 25px;font-weight: 500;">PEERCOMPARE TRAINING VIDEOS (CANADA)</li>
+                    <li><a href="https://cpotraining.investorcom.com/peercompare-training-usmarkets.mp4" target="_blank">PeerCompare Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/video/sm-advisor-alerts.mp4" target="_blank">ShelfMonitor Advisor Alerts&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/video/ca-shelfmonitor.mp4" target="_blank">ShelfMonitor Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/video/ca-shelfanalyzer.mp4" target="_blank">ShelfAnalyzer Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/cp-user-management.mp4" target="_blank">Compliance Platform User Management Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li style="list-style: none;margin-top: 25px;font-weight: 500;">PEERCOMPARE TRAINING GUIDES (CANADA)</li>
+                    <li><a href="https://cponboarding.investorcom.com/trainingfiles/guides/icom-cp-cdn-userguide-sep2022.pdf" target="_blank">PeerCompare User Guide&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-cp-cdn-french-userguide-aug2022.pdf" target="_blank">PeerCompare User Guide (FR)<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/PeerCompare-Training-CDN.PPTX">PeerCompare Training PowerPoint</a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/peercompare-QuickStart-CDN.pdf" target="_blank">PeerCompare QuickStart Guide <i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/trainingfiles/guides/peercompare-QuickStart-CDN.pptx">PeerCompare QuickStart Guide <i class="fas fa-file-powerpoint"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-shelf-update-userguide.pdf" target="_blank">PeerCompare Product Shelf Update Guide&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-sm-advisor-alerts-en.pdf" target="_blank">ShelfMonitor Advisor Alerts Guide - EN <i class="fas fa-file-pdf"></i>&nbsp;</a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-sm-advisor-alerts-fr.pdf" target="_blank">ShelfMonitor Advisor Alerts Guide - FR <i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-usermanagement-userguide.pdf" target="_blank">Compliance Platform User Management Guide (EN)&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-usermanagement-userguide-fr.pdf" target="_blank">Compliance Platform User Management Guide&nbsp; (FR)&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li id="USVIDEOS" style="list-style: none;margin-top: 25px;font-weight: 500;">PEERCOMPARE TRAINING VIDEOS (USA)</li>
+                    <li><a href="https://cpotraining.investorcom.com/video/us-peercompare.mp4" target="_blank">PeerCompare Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/video/us-shelfmonitor.mp4" target="_blank">ShelfMonitor Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/video/us-shelfanalyzer.mp4" target="_blank">ShelfAnalyzer Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/cp-user-management.mp4" target="_blank">Compliance Platform User Management Training Video&nbsp;<i class="fas fa-video"></i></a></li>
+                    <li style="list-style: none;margin-top: 25px;font-weight: 500;">PEERCOMPARE TRAINING GUIDES (USA)</li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/peercompare-QuickStart-US.pdf" target="_blank">PeerCompare QuickStart Guide <i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-shelf-update-userguide.pdf" target="_blank">PeerCompare Product Shelf Update Guide&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/peercompare-QuickStart-US.pptx">PeerCompare QuickStart Guide Template&nbsp;<i class="fas fa-file-powerpoint"></i></a></li>
+                    <li><a href="http://cpotraining.investorcom.com/cp-user-guide-us-feb.pdf" target="_blank">PeerCompare User Guide&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                    <li><a href="https://cpotraining.investorcom.com/guides/icom-usermanagement-userguide.pdf" target="_blank">Compliance Platform User Management Guide&nbsp;<i class="fas fa-file-pdf"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h1 class="toast-header" style="margin-top: 50px;">PeerCompare Configuration</h1>
+                <div class="row">
+                    <div class="col">
+                        <div style="padding: 20px;background-color: var(--bs-gray-100);border: 1px solid;">
+                            <h2>In planning</h2>
+                            <ul></ul>
+                            <ul>
+                                <li>Pre-prod system access</li>
+                                <li>Securities configuration for matching, identification and measure fields</li>
+                                <li>Recommendation Restrictions Configuration</li>
+                                <li>Reasons Text configuration</li>
+                                <li>Artifacts configuration: recommendations artifact, disclosure artifact</li>
+                                <li>ShelfMonitor configuration - email addresses for ShelfMonitor automation</li>
+                                <li>PeerCompare Training</li>
+                                <li>ShelfMonitor/ShelfAnalyzer Training</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h2>Table of Contents</h2>
+                        <ul>
+                            <li><a href="#securities">Securities Used</a></li>
+                            <li><a href="#pcconfigs">PeerCompare Configurations</a></li>
+                            <li><a href="#sdconfigs">Search Domain Configurations</a></li>
+                            <li><a href="#manufacturers">Default Manufacturers</a></li>
+                            <li><a href="#securitytype">Security Types</a></li>
+                            <li><a href="#securityconfigs">Security Configurations</a></li>
+                            <li><a href="#compliance">Compliance</a></li>
+                            <li><a href="#recommendationrestrictions">Recommendations Restrictions</a></li>
+                            <li><a href="#otherconfigs">Other Configurations</a></li>
+                            <li><a href="#compliancechecks">Compliance Checks</a></li>
+                            <li><a href="#reasonswhy">Recommendation - Reasons Why Artifact</a></li>
+                            <li><a href="#disclosure">Recommendations - Disclosure Artifact</a></li>
+                            <li><a href="#shelfmonitor">ShelfMonitor Configuration (email address)</a></li>
+                            <li><a href="#appendixa">Appendix A - Mutual Fund Data Fields</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 id="securities">Securities Used</h2>
+                <p>The Compliance Platform will include the following securities. Please verify the configuration and make sure it matches your contract.</p>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Product Shelf CANADA</th>
+                                <th>Yes/No</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mutual Funds (Canada)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Variable Annuities</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Fixed Income (CSAG) Corporate, Sovereign, Agency, Government (Federal/Provincial/State)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>ETFs (Canada)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>ETFs (USA) - NO SHELF APPLIED</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Equities - NO SHELF APPLIED</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Labour Sponsored Venture Capital</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Pooled Funds</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Segregated Funds</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Closed-end Fund</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Hedge Funds</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Structured Notes</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Liquid Alternative</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Other</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Product Shelf</th>
+                                <th>Yes/No</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mutual Funds (USA)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Variable Annuities</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Fixed Income (CSAG) Corporate, Sovereign, Agency, Government (Federal/Provincial/State)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>ETFs (USA)</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Equities</td>
+                                <td>No</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="pcconfigs">Peer Compare Configurations</h2>
+                <p>PeerCompare downloads data from sources nightly then updates that data by adding each security to a Peer Group based upon defined matching criteria. Matching criteria are easily changed; however, changes take a few days.</p>
+                <p>PeerCompare configurations include:</p>
+                <ol>
+                    <li>Search domain</li>
+                    <li>Allow for recommendations of non-product-shelf securities (Restrict PeerCompare to Client Shelf Only)<br></li>
+                    <li>Prioritize PeerCompare Listing by with Default Manufacturers</li>
+                    <li>Allow Recommendations&nbsp;</li>
+                    <li>Allow Disclosures</li>
+                    <li>Allow PeerRating in PeerCompare</li>
+                    <li>Restrict Actions to Product Shelf</li>
+                    <li>Send Confirmation Email For Compliance Events<br></li>
+                    <li>Secondary Compliance Email Target</li>
+                </ol>
+                <p>PeerCompare and ShelfAnalyzer security type configurations:</p>
+                <ol>
+                    <li>Peer Group matching criteria</li>
+                    <li>Security identification criteria</li>
+                    <li>Security measure/compare criteria</li>
+                    <li>Security reveal configuration</li>
+                </ol>
+                <h2 id="sdconfigs">Search Domain Configuration</h2>
+                <p>The PeerCompare function compares the security to peers on the Product Shelf with the same matching criteria. Uses cases:</p>
+                <ol>
+                    <li><strong>Setting the search domain as the Universe of products:&nbsp;</strong><br>Use Case: An Advisor receives a client's request to add a new security to their portfolio. The Advisor's firm does not have the requested security on its Product Shelf. With the Search Domain configured to search the Universe of securities, <strong>the Advisor can find the targeted fund and compare it to the Firms' Product Shelf to find reasonably available alternatives.</strong><br><br></li>
+                    <li><strong>Setting the search/compare domain as the Product Shelf:&nbsp;</strong><br>Use Case: An Advisor receives a client's request to add a new security to their portfolio. The Advisor's firm does not have the requested security on their Product Shelf. With the Search Domain configured to search the Product Shelf, <strong>the Advisor cannot find the targeted fund and compare it to the Firms' Product Shelf to find reasonably available alternatives.</strong><br><br><strong>Recommended Configuration of the Search Domain:</strong><br>Option 1: Search domain as the Universe of products, compare them to peers on your product shelf.<br><br></li>
+                </ol>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Search Domain</td>
+                                <td><strong>Set the search/compare domain as the Product Shelf</strong><br></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="manufacturers">Prioritize PeerCompare Listing by with Default Manufacturers</h2>
+                <p>This feature allows dealers to set a Priority Security Manufacturer by security type and set the default sort on the Peer Group results to show the Priority Manufacturer at the top of the list with an indicator beside the security.</p>
+                <p>When a Priority Manufacturer is set, a flag (four-pointed star ✧) is added to the PeerCompare listing results to aid the user in identifying the Priority Manufacturer products and the default Peer Group sorting places the Priority Manufacturers at the top of the list. </p>
+                <p><strong>Notes:</strong></p>
+                <ul>
+                    <li>The Manufacturer must have a security on the product shelf, and the spelling must be exactly as in our data.</li>
+                    <li>There is a single manufacturer for each security type.</li>
+                    <li>We have used the term "manufacturer" as securities use a variety of descriptors to identify the provider, issuer, asset manager or fund company.</li>
+                </ul>
+                <h3>Manufacturer Configuration</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Security Type</th>
+                                <th>Default Manufacturer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mutual Funds</td>
+                                <td>Not required</td>
+                            </tr>
+                            <tr>
+                                <td>Liquid Alternative</td>
+                                <td>Not required</td>
+                            </tr>
+                            <tr>
+                                <td>Pooled Funds</td>
+                                <td>Not required</td>
+                            </tr>
+                            <tr>
+                                <td>Labour Sponsored Venture Capital</td>
+                                <td>Not required</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="securitytype">Security Type</h2>
+                <p>The Security Type in the Configuration Guide is a mandatory matching field. Security types are limited to Mutual Fund, ETF, Seg Fund, Hedge Fund, Pooled Fund, Labour Sponsored Fund, North American Equity, Liquid Alternative, Closed-End Fund, and Structured Note.&nbsp;</p>
+                <p>Security type defines the larger categories like Mutual Fund, ETF, Seg Fund and Equity. We have a further breakdown we recommend, called Instrument Type.&nbsp;Instrument Type breaks the Equities Security Type down into more detailed instruments for comparing Equities.&nbsp;See the definition of Instrument Type below, which is based on the first two letters of the ISO CFI code. </p>
+                <p>Instrument Type – Based on first two letters of ISO CFI code </p>
+                <ul>
+                    <li>CB = REIT </li>
+                    <li>CE = ETF</li>
+                    <li>CI - Std Fund</li>
+                    <li>CM - Collective Investment</li>
+                    <li>ED = Depository Receipt</li>
+                    <li>EL = Limited Partnership Units</li>
+                    <li>EM = Other Equities</li>
+                    <li>EP = Preferred Shares</li>
+                    <li>ES = Common Shares</li>
+                    <li>MC = Other</li>
+                </ul>
+                <h3>Definitions</h3>
+                <h4>Matching Fields</h4>
+                <p>Use matching fields to build PeerCompare Peer Group "matching criteria." Used in PeerCompare and ShelfAnalyzer, and for the Analytics Engine, the matching fields define the criteria for Peer Group assignments. </p>
+                <p>When configuring, use the default fields for Matching configuration or choose any combination up to six fields from <a href="#appendixa">Appendix A</a>, Categories: Identification Fields, Basic Information, Fees, Suitability, and ETF Data. </p>
+                <h4>Identification Fields</h4>
+                <p>Use identification fields in PeerCompare to display data important to PeerCompare users. </p>
+                <p>When configuring, use the default fields for Identification configuration or choose any combination of five fields from <a href="#appendixa">Appendix A,</a> Categories: Identification Fields, Basic Information, Sales, Fees, Suitability, ETF Data, and Performance </p>
+                <h4>Measure/Compare fields</h4>
+                <p>Measure fields to provide users with comparative information.</p>
+                <p>When configuring, use default fields for Identification configuration or choose any combination of five fields from <a href="#appendixa">Appendix A</a>, Performance category.</p>
+                <p><em>NOTE: Use ETF data only for ETF Matching and Identification configurations.</em></p>
+                <h4>Reveal Fields</h4>
+                <p>Reveal fields display additional info when the user hovers over the security, e.g., Investment Strategy, Investment Objective.</p>
+                <h3 id="securityconfigs">Configuring PeerCompare</h3>
+                <p>Use the tables below to review the default matching, identification, and measure fields for each security. If you are satisfied with the defaults, no changes are required. However, if you would like to remove data points or change them, please feel free to do so at the bottom of each chart.</p>
+                <div class="table-responsive" style="border: 1px solid;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Mutual Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (YES)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Time Horizon</td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td>Share Class</td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">ETFs PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (YES)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Ticker</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>ETF Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 1 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Currency</td>
+                                <td>Fund Name</td>
+                                <td>Return - 1 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">SEG Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Liquid Alternatives&nbsp; PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 1 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Time Horizon</td>
+                                <td>Fund Name</td>
+                                <td>Return - 1 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td>Share Class</td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Pooled Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Hedge Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Labour Sponsored Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Structured Note Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Closed-End Funds PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Category</td>
+                                <td>Fund Serv Code</td>
+                                <td>MER (Management Expense Ratio)</td>
+                            </tr>
+                            <tr>
+                                <td>Risk Rating</td>
+                                <td>Fund Company</td>
+                                <td>Risk - 3 Year Annualized Standard Deviation</td>
+                            </tr>
+                            <tr>
+                                <td>Load Type</td>
+                                <td>Fund Name</td>
+                                <td>Return - 3 Year Compound Return</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Peer Rating - Fixed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">North American Equities PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields (6 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Sector</td>
+                                <td>Symbol</td>
+                                <td>EPS</td>
+                            </tr>
+                            <tr>
+                                <td>Industry</td>
+                                <td>Company</td>
+                                <td>BETA</td>
+                            </tr>
+                            <tr>
+                                <td>Instrument Type(1)</td>
+                                <td>Market Capital</td>
+                                <td>ROE</td>
+                            </tr>
+                            <tr>
+                                <td>Market Cap</td>
+                                <td>P/E Ratio</td>
+                                <td>Dividend</td>
+                            </tr>
+                            <tr>
+                                <td>Listed In</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive" style="border: 1px solid rgb(33, 37, 41) ;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="font-size: 19px;">Fixed Income PeerCompare Configuration<br>(See <a href="#appendixa">Appendix A</a> for field choices)<br></th>
+                                <th></th>
+                                <th>Accept Defaults (Yes/No)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Matching Fields 7 max)</strong></td>
+                                <td><strong>Identification Fields (5 max)</strong></td>
+                                <td><strong>Measure Fields (5 max)</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Classification</td>
+                                <td>Issue Name</td>
+                                <td>Yield to Maturity</td>
+                            </tr>
+                            <tr>
+                                <td>Classification Sub-Type</td>
+                                <td>Organization</td>
+                                <td>Price</td>
+                            </tr>
+                            <tr>
+                                <td>Issue Type</td>
+                                <td>Coupon</td>
+                                <td>Duration</td>
+                            </tr>
+                            <tr>
+                                <td>Issue Sub-Type</td>
+                                <td>Maturity Date</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Issue Currency</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Industry Classification</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Time Horizon</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><strong>Customizations Below this line</strong></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                                <td style="background: yellow;">Security Data Point</td>
+                            </tr>
+                            <tr style="background: yellow;"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="compliance">Compliance</h2>
+                <p>There are two PeerCompare components to Compliance, 1. Recommendations – Reasons Why and 2. Disclosures. </p>
+                <ol>
+                    <li>A <strong>Recommendation</strong> captures the Advisors CFR/RegBI obligations and stores the detail in ComplianceExpress for reference and reporting. </li>
+                    <li>A <strong>Disclosure</strong> captures the Advisor's CFR obligations, includes it in an investor email, and stores it in ComplianceExpress.</li>
+                </ol>
+                <h3 id="recommendationrestrictions">Recommendation Restrictions</h3>
+                <p>There are two configuration options for this setting:</p>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Restrict recommendations to products on the shelf</strong><br>If set to "true," allow recommendations and disclosures to products ONLY on the shelf.&nbsp;<br></td>
+                                <td>TRUE</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Restrict recommendations to products on the shelf</strong><br>If set to "false," allow recommendations and disclosures to products NOT ON the shelf.<br><br></td>
+                                <td>FALSE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>IMPORTANT:</strong></p>
+                <ol>
+                    <li>If the configuration option for recommendations is set to false, the search domain should be set to the Universe of Securities.</li>
+                    <li>The default configuration option for recommendations is "True." Do not allow recommendations of non-shelf products.</li>
+                </ol>
+                <h3 id="otherconfigs">Other PeerCompare/Compliance Configurations include:</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Configuration</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Allow Recommendations button?</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Allow Disclosures button?</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Allow PDF button?</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Send Recommendations to a centralized email address?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Include PeerGroup Details on Recommendations? (Internal Justification)</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Include PeerGroup Details on Disclosures? (Letter to Investor)</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>If including PeerGroup Details on the Disclosure, do you want to include the Peer Rating column?</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Include Client ID?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Include Account Number?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Include Email Address?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Email Address Mandatory?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Restrict PeerCompare to Product Shelf?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Include PeerRatings in PeerCompare?</td>
+                                <td>YES</td>
+                            </tr>
+                            <tr>
+                                <td>Send confirmation email for compliance events?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Secondary compliance email address?</td>
+                                <td>email address</td>
+                            </tr>
+                            <tr>
+                                <td>Company logo on compliance artifacts?</td>
+                                <td>NO</td>
+                            </tr>
+                            <tr>
+                                <td>Email JSON object for Recommendations?</td>
+                                <td>NO</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 id="compliancechecks">Compliance Checks / Reasons Why Configuration</h3>
+                <p>Compliance checks may differ by security. Please select as many as you need, add custom reasons under the customization line, and note if different by security with a mark. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Reasons Text <strong>(use defaults)</strong></th>
+                                <th>Recommend</th>
+                                <th>Disclose</th>
+                                <th>Mutual<br>Funds</th>
+                                <th>Labour<br>Sponsored</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Completed KYC Forms</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Understand financial goals</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Reviewed Range of Investment Options<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Low fees</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Low risk</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Supports Portfolio Diversification Goals<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Additional Contributions to Existing Holdings<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Fund Manager Track Record and Tenure<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Investor Preference<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Geographic Allocations<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Income Generation<br></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 id="reasonswhy">Recommendation - Reason Why Artifact</h3><img src="us-peercompare-recommendation-artifact.png" style="width: 100%;"><img src="us-peercompare-relative-performance-chart.png" style="width: 100%;">
+                <p>Above is the default configuration for the Recommendations – Reasons Why letter. Please create an artifact example and insert it here if changes are required or list the changes in the box below. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Recommendation - Reasons Why, changes and deletions&nbsp;<strong>(use defaults)</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="height: 250px;">Please describe the changes to the recommendation's artifact here.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="disclosure">Disclosure (letter to investor)</h2><img src="disclosure-artifact.png" style="width: 100%;">
+                <p>Above is the default configuration for the Disclosure –&nbsp; letter to investor. Please create an artifact example and insert it here if changes are required or list the changes in the box below. </p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Disclosure - letter to investor, changes and deletions&nbsp;<strong>(use defaults)</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="height: 250px;">Please describe the changes to the disclosure artifact here.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h2 id="shelfmonitor-2">ShelfMonitor Configuration</h2>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Shelfmonitor Alert Email Address:</td>
+                                <td>complianceteam@yourdomain.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul></ul>
+                <h2 id="appendixa">Appendix A - Data Points</h2>
+                <p>See the shelf helper files in the side menu for datapoint files.</p><h4>Identification Fields </h4>
+(Matching and Identification)
+<ul>
+<li>	FundServ Code </li>
+<li>	Fundata Code </li>
+<li>	Fundata Key </li>
+<li>	Securities Type </li>
+<li>	Fund Classification </li>
+<li>	Detailed Classification </li>
+<li>	Fund Name </li>
+<li>	Fund Name – French </li> 
+<li>	Short Fund Name </li>
+<li>	Short Fund Name – French </li>
+<li>	CUSIP ID </li>
+<li>	Ticker Symbol </li>
+</ul>
+<h4>Basic Information </h4>
+(Matching and Identification)
+<ul>
+<li>	Fund Company </li>
+<li>	Share Class</li>
+<li>	Fund Series</li>
+<li>	Currency</li>
+<li>	Document Type</li> 
+<li>	Launch Date </li>
+<li>	Legal Status</li>
+<li>	Portfolio Manager </li>
+<li>	Advisor</li>
+<li>	Auditor</li>
+<li>	Custodian</li>
+<li>	Distributor</li>
+<li>	Transfer Agent</li>
+<li>	Trustee </li>
+</ul>
+<h4>Fees </h4>
+(Matching and Identification)
+<ul>
+<li>	Back End Fee Applied To </li>
+<li>	Charge for Other Withdrawal Description </li>
+<li>	English RRSP Cancellation Description </li>
+<li>	Expenses Paid By </li>
+<li>	Front Fee Type </li>
+<li>	Management Fee Description </li>
+<li>	Management Fee Percentage </li>
+<li>	Maximum Back End Fee Percentage</li> 
+<li>	Maximum Back End Trailer Percentage </li>
+<li>	Maximum Low Load Fee Percentage </li>
+<li>	Maximum Low Load Trailer Percentage </li>
+<li>	Maximum No Load Trailer Percentage </li>
+<li>	Maximum Front End Fee Percentage </li>
+<li>	Maximum Front End Trailer Percentage </li>
+<li>	Management Expense Ratio (MER) </li>
+<li>	Other Fees description </li>
+<li>	RRIF Annual Admin Fee </li>
+<li>	RRIF Withdrawal Fee </li>
+<li>	RRSP Annual Admin Fee </li>
+<li>	RRSP Withdrawal Fee </li>
+<li>	Switching Fee Charge </li>
+<li>	Switching Fee Description </li>
+<li>	RRSP Cancellation Description </li>
+<li>	Trailer Fee </li>
+<li>	Trailer Fee Description </li>
+</ul>
+<h4>Sales</h4> 
+(Identification)
+<ul>
+<li>	Available In Provide </li>
+<li>	How Sold </li>
+<li>	How Sold Details </li>
+<li>	Expenses Paid By </li>
+<li>	Load Code </li>
+<li>	Load Type </li>
+<li>	Non-RRSP Minimum Balance </li>
+<li>	Non-RRSP Minimum Investment </li>
+<li>	Non-RRSP Subsequent Investment </li>
+<li>	PAC Minimum Investment </li>
+<li>	PAC Plan </li>
+<li>	PAC Subsequent Investment </li>
+<li>	RRSP Minimum Investment </li>
+<li>	RRSP Subsequent Investment </li>
+<li>	Sales Status </li>
+<li>	SWP Minimum Balance </li>
+<li>	SWP Minimum Withdrawal </li>
+<li>	SWP Plan </li>
+</ul>
+<h4>Suitability </h4>
+(Matching and Identification)
+<ul>
+<li>	Securities Type </li>
+<li>	CIFSC Category </li>
+<li>	CIFSC Category - French </li>
+<li>	High Net Worth </li>
+<li>	CIFSC Associated USD Index </li>
+<li>	CIFSC Associated Canadian Index </li>
+<li>	Investment Objective </li>
+<li>	Investment Objective - French </li>
+<li>	Investment Strategy </li>
+<li>	Investment Strategy – French </li>
+<li>	Prospectus Risk Date </li>
+<li>	Prospectus Risk Rating </li>
+<li>	Prospectus Risk Text </li>
+<li>	Prospectus Time Horizon </li>
+<li>	Segregated Fund Risk Date </li>
+<li>	segregated Fund Risk </li>
+<li>	Segregated Fund Tim Horizon </li>
+<li>	ETF Risk </li>
+<li>	RRSP Eligible </li>
+<li>	RRSP Eligible </li>
+<li>	Distribution Frequency </li>
+<li>	Fixed Distribution </li>
+</ul>
+<h4>ETF Data </h4>
+(ETF Match & ETF Identification)
+<ul>
+<li>	ETF – Underlying Index </li>
+<li>	ETF – Exposure </li>
+<li>	ETF – Asset Class High </li>
+<li>	ETF – Asset Class Medium </li>
+<li>	ETF – Asset Class Low </li>
+<li>	ETF – Leveraged </li>
+<li>	ETF – Inverse </li>
+<li>	ETF – Covered Call Strategy </li>
+<li>	ETF – Daily Reset </li>
+<li>	ETF – Synthetic </li>
+</ul>
+ 
+<h4>Performance </h4>
+(Identification and Measure)
+</ul>
+<li>	1 Year Calendar Return </li>
+<li>	2 Year Calendar Return </li>
+<li>	3 Year Calendar Return </li>
+<li>	4 Year Calendar Return </li>
+<li>	5 Year Calendar Return </li>
+<li>	6 Year Calendar Return </li>
+<li>	7 Year Calendar Return </li>
+<li>	8 Year Calendar Return </li>
+<li>	9 Year Calendar Return </li>
+<li>	10 Year Calendar Return </li>
+<li>	YTD Return </li>
+<li>	1 Month Return </li>
+<li>	3 Month Return </li>
+<li>	6 Month Return </li>
+<li>	1 Year Compound Return </li>
+<li>	3 Year Compound Return </li>
+<li>	5 Year Compound Return </li>
+<li>	10 Year Compound Return </li>
+<li>	1 Year Annualized Standard Deviation </li>
+<li>	3 Year Annualized Standard Deviation </li>
+<li>	5 Year Annualized Standard Deviation </li>
+<li>	10 Year Annualized Standard Deviation </li>
+<li>	Fund Return Date </li>
+<li>	Inception Return Date </li>
+<li>	Inception Return </li>
+</ul><h2 id="appendixb">Appendix B – NA Equities Available Data Fields</h2>
+<h4>Basic Information </h4>
+<ul>
+<li>	Ticker Symbol
+<li>	Instrument Type
+<li>	Exchange Name
+<li>	Company Long Name
+<li>	Company Short Name
+<li>	Company Description
+<li>	Industry
+<li>	Sector
+<li>	Issue Type
+<li>	NAICS
+<li>	ISOCFI
+<li>	Market Cap
+<li>	Market Cap Segment 
+<li>	Index Name
+<li>	Country
+<li>	Listed In Country
+<li>	Address
+<li>	City
+<li>	Email/Telephone/FAX/Web Site
+<li>	Auditor
+<li>	Name of CEO
+<li>	Number of Employees
+<li>	Total Outstanding Shares
+</ul>
+<p><strong>NOTE</strong>: InvestorCOM has defined a new variable called, “Market Cap Segment” and have assigned the following values: </p>
+<ul>
+    <li>marketcap &gt;= 10,000,000,000 = &quot;Large Cap&quot; </li>
+    <li>marketcap &gt;= 1,000,000,000 = &quot;Mid Cap&quot; </li>
+    <li>marketcap &gt;= 300,000,000 = &quot;Small Cap&quot; </li>
+    <li>marketcap &lt; 299,999,999 = &quot;Micro Cap&quot;</li>
+</ul>
+<h4>Performance</h4>
+<ul>
+<li>	Standard Deviation 1/3/5/10 Years
+<li>	Alpha
+<li>	Beta – 1/3/5 Year
+<li>	Moving Average
+<li>	52 Week High/Low/Change
+<li>	Average Trading Volume
+<li>	Asset Turnover
+<li>	Share Turnover
+<li>	Invoice Turnover
+<li>	Receivables Turnover
+<li>	Dividend Rate
+<li>	Dividend Yield
+<li>	Dividend – 3/5/year
+<li>	EBITDA Margin
+<li>	EBIT Margin
+<li>	Gros Margin
+<li>	Pre-Tax Profit Margin
+<li>	Earnings Per Share
+<li>	Latest Fiscal Dividends Per Share
+<li>	Earnings Per Share
+<li>	Latest Fiscal EPS
+<li>	Latest Fiscal Revenue
+<li>	Debt to Equity Ratio
+<li>	Debt to Capital Ratio
+<li>	Price to Earnings Ratio
+<li>	Price to Profit Margin
+<li>	Price to Book Ratio
+<li>	Price to Cash Flow
+<li>	Price to Free Cash
+<li>	Price to Sales
+<li>	Price to Tangible Book
+<li>	Return on Assets
+<li>	Return on Capital
+<li>	Return on Equity
+<li>	Revenue
+<li>	Revenue Per Share
+</ul>
+<h2 id="appendixc">Appendix C – Fixed Income Available Data Fields</h2>
+<h4>Matching Fields</h4>
+<ul>
+<li>	Classification
+<li>	Classification Sub Type
+<li>	Issue Currency
+<li>	Org Industry Classification - 1
+<li>	Time to Maturity
+<li>	Restricted
+<li>	Payment Category
+<li>	Tax Status
+<li>	HasPIK
+<li>	HasSink
+<li>	IsBullet
+<li>	IsCallable
+<li>	IsConvertable
+<li>	IsPuttable
+<li>	Other Fields
+<li>	Org Industry Classification - 2-5
+<li>	Issue Type
+<li>	Issue Sub-Type
+</ul>
+<h4>Identification Fields</h4>
+<ul>
+<li>	Organization Ticker
+<li>	Issue Name
+<li>	Organizaiton Name
+<li>	Current Coupon
+<li>	Search
+<li>	Issue Name
+<li>	Maturity Date
+<li>	Coupon
+<li>	CUSIP or ISIN
+<li>	Organization Ticker
+<li>	Restricted
+<li>	Tier
+<li>	Payment Category Sub Type
+<li>	Other Fields
+<li>	Maturity Date
+<li>	Issue Type
+<li>	Issue Sub Type
+</ul>
+<h4>Measurement Fields</h4>
+<ul>
+<li>	Mid Yield To Maturity
+<li>	Mid Price
+<li>	Modified Duration - Mid
+<li>	Other Fields
+<li>	Bid Yield To Maturity
+<li>	Ask Yield To Maturity
+<li>	Bid Yield To Worst
+<li>	Mid Yield To Worst
+<li>	Ask Yield To Worst
+<li>	Bid Price
+<li>	Ask Price
+<li>	Modified Duration - Bid
+<li>	Modified Duration - Ask
+<li>	McCauley Duration - Bid
+<li>	McCauley Duration - Mid
+<li>	McCauley Duration - Ask
+<li>	To Come
+<li>	Credit Ratings
+</ul>
+
+            </div>
+        </div>
+        <footer style="margin-top: 15px;border-top: 1px solid silver;padding-top: 15px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p><i class="far fa-copyright"></i>&nbsp;2022 <a href="https://investorcom.com/" target="_blank">InvestorCOM Inc.</a>&nbsp;All rights reserved.&nbsp;</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><a href="https://investorcom.com/legal/#:~:text=Privacy%20%26%20Accessibility" target="_blank">Privacy and Accessibility</a>&nbsp; &nbsp; &nbsp;<a href="https://investorcom.com/legal/" target="_blank">Legal</a>&nbsp;</p>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+
+</html>

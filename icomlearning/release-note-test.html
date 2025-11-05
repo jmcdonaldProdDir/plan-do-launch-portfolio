@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Plan Do Launch",
+  "url": "https://plandolaunch.com",
+  "logo": "https://plandolaunch.com/plandolaunch.png",
+  "description": "AI-enabled SaaS onboarding frameworks, portals, and delivery copilots.",
+  "founder": {
+    "@type": "Person",
+    "name": "John A. McDonald"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "info@plandolaunch.com"
+  }
+}
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Release notes test</title>
+    <meta name="description" content="Plan Do Launch helps SaaS and compliance teams scale onboarding with AI-enabled frameworks, client portals, and delivery copilots. Reduce time-to-onboard, increase team capacity, and turn onboarding chaos into a repeatable system.">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bss-overrides.css">
+    <link rel="stylesheet" href="../assets/css/onboarding.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #005487;border-bottom: 1px solid lightgray;">
+        <div class="container-fluid"><a class="navbar-brand" href="../index.html"><img src="../assets/img/logo-investorcom-reverse-2x.png" height="30px"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="rolloveranalyzer-onboarding.html">RolloverAnalyzer&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="rolloveranalyzer-onboarding.html">Onboarding&nbsp;</a><a class="dropdown-item" href="client-profile.html">Client Profile</a><a class="dropdown-item" href="account-type-config.html">Account Types</a><a class="dropdown-item" href="plan-2-plan.html">Plan to Plan</a><a class="dropdown-item" href="plan-2-ira.html">Plan to IRA</a><a class="dropdown-item" href="ira-2-ira.html">IRA to IRA</a></div>
+                    </li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">PeerCompare&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="peercompare-onboarding.html">Onboarding</a><a class="dropdown-item" href="peer-compare-config.html">Configurations</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="account-compare.html">AccountCompare</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Single Sign On (SSO)</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="sso-integration-summary.html">SSO Integration Summary</a><a class="dropdown-item" href="sso-integration.html">SSO Integration</a><a class="dropdown-item" href="federated-identity-saml.html">Federated Identity (SAML)</a><a class="dropdown-item" href="federated-identity-oidc.html">Federated Identity (OIDC)</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="onboarding-library.html">Onboarding Library</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" role="button" href="support.html">SUPPORT</a></li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Release 23.2 - Compliance Platform Enhancements/Fixes</h1>
+        <hr><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/vNEvsqUNRvE" class="float-end" width="560" height="315" style="margin: 10px;"></iframe><h2>Allow Variable Annuities to be Filtered by VA Product Shelf</h2><div style=""box-sizing:border-box;outline:none;""><b>Overview</b> </div><div style=""box-sizing:border-box;outline:none;"">Clients using variable annuities have limited peer-matching criteria to use and, as a result, get peer group listings in the range of 250 pages. The goal of this enhancement is to shorten that list to something reasonable - 2 pages at most. Please note that a recent change to the Peer Group listing page did provide the ability to reduce the size of the list. However, that same list would be part of the peer group comparison in PeerCompare.&nbsp; </div><div style=""box-sizing:border-box;outline:none;""><br> </div><div style=""box-sizing:border-box;outline:none;"">With this enhancement, c<span style="""">lients may now upload a product shelf that includes variable annuities and use that shelf data to filter their data.&nbsp;</span> </div><div style=""box-sizing:border-box;outline:none;""><br> </div><div style=""box-sizing:border-box;outline:none;""><b>Enhancement</b> </div><div style=""box-sizing:border-box;outline:none;""><ol><li>Include variable annuities on the product shelf. </li><li>Use the securities on the product shelf to filter the VAs, to get smaller peer group listings, and peer matching groups. </li> </ol> </div><div style=""box-sizing:border-box;outline:none;""><b>Process</b> </div><div style=""box-sizing:border-box;outline:none;""><ol><li>Upload the product shelf, and include variable annuities (US, that is, Morningstar codes).&nbsp; See sample below. </li><li>Configure PeerCompare to use the product shelf for comparisons instead of the universe.&nbsp; </li> </ol> </div><div style=""box-sizing:border-box;outline:none;""><br> </div><div style=""box-sizing:border-box;outline:none;""><b></b> </div><div style=""box-sizing:border-box;outline:none;""><b>Client Impact</b> </div><div style=""box-sizing:border-box;outline:none;""><ul><li>The client will see fewer peers in matching results in both PeerCompare and ShelfAnalyzer. </li><li>The client will have fewer pages of peer group listings in the recommendation/disclosure documents. </li><li>The client will be made aware of any changes, additions and deletions to the VA product shelf. </li> </ul> </div>
+    </div>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+
+</html>
