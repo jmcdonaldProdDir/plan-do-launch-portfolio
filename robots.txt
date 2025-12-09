@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Block irrelevant directories (if they appear in future)
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /internal/
+
+# Important: Tell Google, Bing, and AI crawlers where your sitemap is
+Sitemap: https://plandolaunch.com/sitemap.xml
+
+# AI crawler compatibility signals
+# Allows ChatGPT, Perplexity, Bing AI, Apple Spotlight & others
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
