@@ -1,0 +1,123 @@
+:root {
+  --bs-primary: #193A5B;
+  --bs-primary-rgb: 25, 58, 91;
+  --bs-secondary: #5C6F82;
+  --bs-secondary-rgb: 92, 111, 130;
+  --bs-info: #355F7C;
+  --bs-info-rgb: 53, 95, 124;
+  --bs-success: #4E6E58;
+  --bs-success-rgb: 78, 110, 88;
+  --bs-warning: #8A6D3B;
+  --bs-warning-rgb: 138, 109, 59;
+  --bs-danger: #7A3E3E;
+  --bs-danger-rgb: 122, 62, 62;
+  --bs-body-bg: #F4F6F8;
+  --bs-body-color: #1F2933;
+  --bs-border-color: #D1D9E0;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  background: url('../../assets/img/john%20presenting.png') center/cover no-repeat;
+  color: #F1F5F9;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient( to left, rgba(25,58,91,0.70) 0%, rgba(25,58,91,0.62) 35%, rgba(25,58,91,0.40) 65%, rgba(25,58,91,0.12) 85%, rgba(25,58,91,0) 100% );
+  z-index: 1;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+#hero .btn-primary, #hero .btn-primary:focus, #hero .btn-primary:active {
+  color: #ffffff !important;
+}
+
+#hero .btn-outline-light, #hero .btn-outline-light:focus, #hero .btn-outline-light:active {
+  color: #ffffff !important;
+}
+
+/* =================================
+   TYPOGRAPHY SYSTEM
+================================= */
+
+/* Body */
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+/* Hero headline stronger */
+
+#hero h1 {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+}
+
+/* Section headings */
+
+section h2 {
+  font-weight: 600;
+}
+
+/* Lead text */
+
+.lead {
+  font-weight: 500;
+}
+
+/* Buttons */
+
+.btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Slight tightening on dark sections */
+
+section[style*="#193a5b"] h2, section[style*="#193a5b"] h1 {
+  letter-spacing: -0.025em;
+}
+
+#guide {
+  position: relative;
+  background: url('../../assets/img/photo-1545987796-200677ee1011.jpg') center/cover no-repeat;
+}
+
+#guide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 1;
+}
+
+#guide .container {
+  position: relative;
+  z-index: 2;
+}
+
