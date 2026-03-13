@@ -99,7 +99,7 @@ const payload = {
 
     try {
 
-    const response = await fetch("/api/complete-assessment", {
+const response = await fetch("https://assessment.plandolaunch.com/api/complete-assessment", {
     method: "POST",
     headers: {
         "Content-Type": "application/json"
