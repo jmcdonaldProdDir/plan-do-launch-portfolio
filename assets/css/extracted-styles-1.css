@@ -1,0 +1,89 @@
+.pdl-narrow-container {
+  max-width: 900px;
+}
+
+.pdl-heading-spacing {
+  letter-spacing: -0.02em;
+}
+
+.pdl-paragraph-color {
+  color: rgba(241,245,249,.85);
+}
+
+.pdl-section-color-alternate {
+  background-color: #193A5B;
+}
+
+.pdl-card-trans {
+  background: transparent;
+}
+
+.pdl-paragraph-color-alternate {
+  color: rgba(241,245,249,.65);
+}
+
+.pdl-container-blog-dim {
+  max-width: 980px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.pdl-index-letter-spacing {
+  letter-spacing: .12em;
+}
+
+.pdl-index-line-height {
+  line-height: 1.5;
+}
+
+.pdl-index-color {
+  color: rgba(241,245,249,.75);
+}
+
+.pdl-body-color-variants {
+  background: #193a5b;
+  color: #F1F5F9;
+}
+
+.pdl-growth-is-styling {
+  max-width: 34rem;
+  color: rgba(241,245,249,.9);
+}
+
+.pdl-button-index-style {
+  font-weight: 600;
+}
+
+.pdl-index-line-height-variant2 {
+  line-height: 1.8;
+}
+
+.pdl-container-width-variant-2 {
+  width: 3rem;
+  height: 3rem;
+}
+
+.pdl-section-height-70vh {
+  min-height: 70vh;
+}
+
+.pdl-font-135 {
+  font-size: 1.35rem;
+}
+
+.pdl-blog-index-style {
+  background: #193A5B;
+  min-height: 50vh;
+}
+
+.pdl-index-hero {
+  background: url("../../assets/img/john%20presenting.png") no-repeat;
+  background-size: cover;
+  height: calc(100vh-72px);
+  color: #F1F5F9;
+}
+
+.pdl-index-orange-highlight {
+  color: #ff7a73;
+}
+
