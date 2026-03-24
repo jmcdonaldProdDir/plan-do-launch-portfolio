@@ -1,1 +1,9 @@
+/* Restored styles placeholder — import main stylesheet to ensure styles are applied.
+	This file previously contained the compiled/minified CSS bundle. To avoid
+	a 0-byte stylesheet being served while a proper build step is restored,
+	we import `pdl.css` here as a temporary fallback. Replace with your
+	production minified bundle when available.
+*/
+
+@import url("pdl.css");
 
