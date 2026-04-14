@@ -1,0 +1,266 @@
+<html data-bs-theme="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Onboarding Capacity Chart | Plan Do Launch</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            background: #f7f7f5;
+            color: #1d1d1f;
+            margin: 0;
+            padding: 56px 0;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 44px 48px;
+            background: #ffffff;
+            border: 1px solid #e2e2df;
+            border-radius: 2px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+        .eyebrow {
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            letter-spacing: 0.16em;
+            color: #6a6a6d;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+        h1 {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            margin-top: 0;
+            margin-bottom: 0.85rem;
+            font-size: 2rem;
+            line-height: 1.15;
+            color: #1d1d1f;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .lead {
+            color: #525256;
+            margin-bottom: 2rem;
+            font-size: 0.98rem;
+            max-width: 800px;
+        }
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 2rem;
+        }
+        .header-copy {
+            flex: 1;
+            min-width: 0;
+        }
+        .ici-card {
+            width: 120px;
+            min-width: 120px;
+            border: 1px solid #b7c1cd;
+            border-radius: 16px;
+            background: #e3e6ea;
+            text-align: center;
+            padding: 14px 10px 12px;
+        }
+        .ici-label {
+            margin: 0;
+            color: #2f3a46;
+            letter-spacing: 0.24em;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+        }
+        .ici-value {
+            margin: 6px 0 2px;
+            font-size: 3rem;
+            line-height: 1;
+            font-weight: 700;
+            color: #1f2a36;
+        }
+        .ici-scale {
+            margin: 0;
+            font-size: 1.65rem;
+            line-height: 1;
+            color: #2f3a46;
+        }
+        .chart-wrap {
+            height: 500px;
+            border-top: 2px solid #163a59;
+            border-left: 1px solid #e2e2df;
+            border-right: 1px solid #e2e2df;
+            border-bottom: 1px solid #e2e2df;
+            border-radius: 0;
+            padding: 18px 16px 10px;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-row">
+            <div class="header-copy">
+                <p class="eyebrow">Onboarding Capacity Diagnostic</p>
+                <h1>Onboarding Infrastructure Capacity Report</h1>
+                <p class="lead">A structural evaluation of onboarding infrastructure across five operational controls.</p>
+            </div>
+            <div class="ici-card" aria-label="Infrastructure Capacity Index score card">
+                <p class="ici-label">ICI</p>
+                <p class="ici-value">49</p>
+                <p class="ici-scale">/ 100</p>
+            </div>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="capacityChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const valueLabelPlugin = {
+            id: 'valueLabelPlugin',
+            afterDatasetsDraw(chart) {
+                const { ctx } = chart;
+                const dataset = chart.data.datasets[0];
+                const meta = chart.getDatasetMeta(0);
+                const zeroLineY = chart.scales.y.getPixelForValue(0);
+
+                ctx.save();
+                ctx.font = '600 12px Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+                ctx.fillStyle = '#ffffff';
+                ctx.textAlign = 'center';
+
+                meta.data.forEach((bar, index) => {
+                    const value = dataset.data[index];
+                    const x = bar.x;
+
+                    if (value === 0) {
+                        const markerWidth = 58;
+                        const markerHeight = 20;
+                        const markerRadius = 2;
+                        const markerX = x - markerWidth / 2;
+                        const markerY = zeroLineY - markerHeight / 2;
+
+                        ctx.fillStyle = '#163a59';
+                        ctx.beginPath();
+                        ctx.moveTo(markerX + markerRadius, markerY);
+                        ctx.lineTo(markerX + markerWidth - markerRadius, markerY);
+                        ctx.quadraticCurveTo(markerX + markerWidth, markerY, markerX + markerWidth, markerY + markerRadius);
+                        ctx.lineTo(markerX + markerWidth, markerY + markerHeight - markerRadius);
+                        ctx.quadraticCurveTo(markerX + markerWidth, markerY + markerHeight, markerX + markerWidth - markerRadius, markerY + markerHeight);
+                        ctx.lineTo(markerX + markerRadius, markerY + markerHeight);
+                        ctx.quadraticCurveTo(markerX, markerY + markerHeight, markerX, markerY + markerHeight - markerRadius);
+                        ctx.lineTo(markerX, markerY + markerRadius);
+                        ctx.quadraticCurveTo(markerX, markerY, markerX + markerRadius, markerY);
+                        ctx.closePath();
+                        ctx.fill();
+
+                        ctx.fillStyle = '#ffffff';
+                        ctx.textBaseline = 'middle';
+                        ctx.fillText('0', x, zeroLineY);
+                        ctx.fillStyle = '#ffffff';
+                        return;
+                    }
+
+                    const y = value >= 0 ? bar.y + 8 : bar.y - 8;
+                    ctx.textBaseline = value >= 0 ? 'top' : 'bottom';
+                    ctx.fillText(value, x, y);
+                });
+
+                ctx.restore();
+            }
+        };
+
+        const ctx = document.getElementById('capacityChart');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Staff Acceleration',
+                    'Canon Governance',
+                    'Process Definition',
+                    'Signal Visibility',
+                    'Continual Improvement'
+                ],
+                datasets: [{
+                    data: [-10, 0, 10, 1, -2],
+                    backgroundColor: [
+                        '#9a5b5b',
+                        '#8d8f94',
+                        '#163a59',
+                        '#4a657d',
+                        '#6a7a69'
+                    ],
+                    borderColor: [
+                        '#9a5b5b',
+                        '#8d8f94',
+                        '#163a59',
+                        '#4a657d',
+                        '#6a7a69'
+                    ],
+                    borderWidth: 1,
+                    borderRadius: 2,
+                    barThickness: 58
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        enabled: true
+                    }
+                },
+                layout: {
+                    padding: {
+                        top: 24
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        border: {
+                            display: false
+                        },
+                        ticks: {
+                            color: '#4f5054',
+                            font: {
+                                size: 11,
+                                weight: 500
+                            }
+                        }
+                    },
+                    y: {
+                        min: -10,
+                        max: 10,
+                        ticks: {
+                            stepSize: 5,
+                            color: '#6a6a6d',
+                            font: {
+                                size: 11
+                            }
+                        },
+                        grid: {
+                            color: (context) => context.tick.value === 0 ? '#163a59' : '#e7e7e4',
+                            lineWidth: (context) => context.tick.value === 0 ? 2 : 1
+                        },
+                        border: {
+                            color: '#e2e2df'
+                        }
+                    }
+                }
+            },
+            plugins: [valueLabelPlugin]
+        });
+    </script>
+</body>
+</html>

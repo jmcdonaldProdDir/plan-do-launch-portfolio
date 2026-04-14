@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Onboarding Infrastructure Capacity Report</title>
+    <meta name="description" content="Static onboarding infrastructure capacity report sample.">
+    <link rel="icon" type="image/png" sizes="1024x1024" href="../assets/img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap">
+    <style>
+        :root {
+            --ink: #1f2937;
+            --muted: #4b5563;
+            --line: #e5e7eb;
+            --card: #f8fafc;
+            --brand: #1d4ed8;
+            --danger: #991b1b;
+            --good: #14532d;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Inter", Arial, sans-serif;
+            color: var(--ink);
+            background: #eef2f7;
+            line-height: 1.65;
+            padding: 36px 20px;
+        }
+
+        .report {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 44px 44px 56px;
+            background: #ffffff;
+            border: 1px solid #dbe3ef;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .logo {
+            width: 170px;
+            height: auto;
+            margin-bottom: 14px;
+        }
+
+        .report-header-copy {
+            min-width: 0;
+        }
+
+        .title-score-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .title-copy {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .kicker {
+            margin: 0;
+            color: var(--brand);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+
+        h1 {
+            margin: 8px 0 14px;
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            margin: 0 0 24px;
+            color: var(--muted);
+        }
+
+        .meta-line {
+            margin: 4px 0 18px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .score-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 24px;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .score-line {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .score-card p {
+            max-width: none;
+            text-align: center;
+        }
+
+        .score-line .label {
+            font-size: 0.95rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .score-line .value {
+            font-size: 2.2rem;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .section {
+            margin-top: 28px;
+            padding-top: 4px;
+        }
+
+        h2 {
+            margin: 0 0 14px;
+            font-size: 1.42rem;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin: 18px 0 8px;
+            font-size: 1.05rem;
+        }
+
+        p {
+            margin: 0 0 12px;
+            max-width: 75ch;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        li { margin-bottom: 8px; }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            border-radius: 999px;
+            padding: 3px 10px;
+            margin-left: 8px;
+            vertical-align: middle;
+            border: 1px solid transparent;
+        }
+
+        .tag-struggling {
+            color: var(--danger);
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+
+        .tag-functional {
+            color: #92400e;
+            background: #fffbeb;
+            border-color: #fcd34d;
+        }
+
+        .tag-scalable {
+            color: var(--good);
+            background: #f0fdf4;
+            border-color: #86efac;
+        }
+
+        .glance-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .glance-item {
+            background: #f8fafc;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+
+        .glance-label {
+            display: block;
+            color: var(--muted);
+            font-size: 0.82rem;
+            margin-bottom: 2px;
+        }
+
+        .glance-value {
+            display: block;
+            font-weight: 600;
+            font-size: 0.97rem;
+        }
+
+        .callout {
+            border-left: 4px solid var(--line);
+            background: #f8fafc;
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin: 10px 0 12px;
+            max-width: 85ch;
+        }
+
+        .callout.consequence {
+            border-left-color: #93c5fd;
+        }
+
+        .callout.risk {
+            border-left-color: #fca5a5;
+        }
+
+        .scale-highlight {
+            background-color: #f3f4f6;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+
+        .chart-embed {
+            width: 100%;
+            height: 620px;
+            border: 1px solid #e2e2df;
+            background: #ffffff;
+        }
+
+        @media print {
+            body {
+                background: #ffffff;
+                padding: 0;
+            }
+
+            .report {
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+                max-width: 100%;
+            }
+
+            .section,
+            .score-card,
+            .glance-item,
+            .callout {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 0;
+                background: #ffffff;
+            }
+
+            .report {
+                padding: 28px 18px 36px;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .title-score-row {
+                flex-direction: column;
+            }
+
+            .score-card {
+                max-width: 100%;
+                min-width: 0;
+            }
+
+            .glance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-embed {
+                height: 520px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="report">
+        <div class="report-header-copy">
+            <img class="logo" src="../assets/img/plandolaunch-transparent-dark.png" alt="Plan Do Launch Logo">
+            <p class="kicker">Onboarding Capacity Diagnostic</p>
+            <div class="title-score-row">
+                <div class="title-copy">
+                    <h1>Onboarding Infrastructure Capacity Report</h1>
+                    <p class="meta-line">Generated: April 14, 2026</p>
+                </div>
+            <section class="score-card">
+                <div class="score-line">
+                    <span class="label">Infrastructure Control Integrity (ICI)</span>
+                    <span class="value">49 / 100</span>
+                </div>
+            </section>
+            </div>
+            <p class="subtitle">A structural evaluation of onboarding infrastructure across five operational controls.</p>
+        </div>
+
+        <section class="section">
+            <h2>At a Glance</h2>
+            <div class="glance-grid">
+                <div class="glance-item">
+                    <span class="glance-label">Strongest Control</span>
+                    <span class="glance-value">Process Definition (10)</span>
+                </div>
+                <div class="glance-item">
+                    <span class="glance-label">Weakest Control</span>
+                    <span class="glance-value">Staff Acceleration (-10)</span>
+                </div>
+                <div class="glance-item">
+                    <span class="glance-label">Structural Asymmetry</span>
+                    <span class="glance-value">20</span>
+                </div>
+                <div class="glance-item">
+                    <span class="glance-label">Diagnostic Confidence</span>
+                    <span class="glance-value">60 (High Confidence)</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Executive Summary</h2>
+            <p>Infrastructure Control Integrity (ICI) is 49 out of 100 based on structural analysis of operational controls. The control profile includes 2 Struggling, 2 Functional, and 1 Scalable classifications. Strength is most concentrated in Process Definition and most limited in Staff Acceleration. Structure is uneven across controls with an asymmetry delta of 20. Large gaps between controls indicate structural imbalance, where strong delivery capabilities operate without equally strong governance or visibility. Hero-dependence signal is Present. In this diagnostic, hero dependence describes systems where outcomes rely on individual expertise rather than governed operational infrastructure. Overall structure is determined by the consistency and governance of these controls, not by sentiment or intent.</p>
+        </section>
+
+        <section class="section">
+            <h2>Control Score Distribution</h2>
+            <iframe class="chart-embed" src="/assessment/chart.html" title="Control score distribution chart"></iframe>
+        </section>
+
+        <section class="section">
+            <h2>Control Analysis</h2>
+
+            <h3>Staff Acceleration (-10) <span class="tag tag-struggling">STRUGGLING</span></h3>
+            <p>A clearly defined and measured pathway for new staff to reach independent capability does not exist. Progression depends on informal shadowing and individual guidance rather than a structured framework. Onboarding canon and capability development are not clearly owned within operations. Documentation and standards are informal, inconsistently maintained, and often out of date. Less-experienced staff require frequent supervision to execute onboarding tasks. The onboarding structure becomes unstable as team size or onboarding volume increases. Capability gaps are not identified before they impact delivery. Results depend heavily on specific individuals rather than working consistently across operators.</p>
+            <div class="callout consequence"><strong>Operational Consequence</strong><br>New onboarding staff require sustained supervision before operating independently. Delivery consistency varies across staff, increasing coordination load and slowing onboarding execution.</div>
+            <div class="callout risk"><strong>Structural Risk</strong><br>As onboarding volume increases, delivery quality may become dependent on a small number of experienced staff, creating operational bottlenecks.</div>
+
+            <h3>Canon Governance (0) <span class="tag tag-functional">FUNCTIONAL</span></h3>
+            <p>A single source of truth exists but is not consistently used. Teams sometimes rely on alternate or informal sources. Documentation ownership exists, but review and maintenance occur inconsistently or without a defined cadence. Documentation supports execution, but informal knowledge is still required to fill gaps. Knowledge remains usable at current scale but requires manual coordination as complexity grows. Some documentation gaps are identified, but detection is not systematic. Knowledge survives personnel changes but requires active handoff and manual transfer.</p>
+            <div class="callout consequence"><strong>Operational Consequence</strong><br>Documentation supports onboarding delivery but still requires manual interpretation and coordination. Knowledge remains usable but does not yet scale automatically with operational complexity.</div>
+            <div class="callout risk"><strong>Structural Risk</strong><br>As onboarding complexity increases, manual coordination of documentation may create operational friction.</div>
+
+            <h3>Process Definition (10) <span class="tag tag-scalable">SCALABLE</span></h3>
+            <p>Onboarding follows clearly defined and consistently enforced stages. Scope changes and handoffs follow defined and repeatable controls. Onboarding progresses predictably without frequent resets. The onboarding process remains stable as client volume and complexity increase. Onboarding stage progress is clearly visible without manual intervention. Delivery timelines remain predictable across operators and client profiles.</p>
+            <div class="callout consequence"><strong>Operational Consequence</strong><br>Onboarding execution follows clearly governed stages. Delivery timelines remain predictable even as onboarding volume and operational complexity increase.</div>
+            <div class="callout risk"><strong>Structural Risk</strong><br>Defined operational stages allow onboarding execution to remain stable as delivery volume increases.</div>
+
+            <h3>Signal Visibility (1) <span class="tag tag-functional">FUNCTIONAL</span></h3>
+            <p>A reporting structure exists but lacks consistency. Ownership exists but review cadence is inconsistent. Delays are recorded but without full consistency. Signal visibility clarity holds at current scale but weakens under growth. Some risks are identified early, but detection is not systematic. Leadership has partial visibility into structural exposure.</p>
+            <div class="callout consequence"><strong>Operational Consequence</strong><br>Operational signals exist but require manual interpretation. Leadership visibility into onboarding performance depends on periodic review rather than continuous monitoring.</div>
+            <div class="callout risk"><strong>Structural Risk</strong><br>As operational complexity grows, manual interpretation of signals may delay early intervention.</div>
+
+            <h3>Continual Improvement (-2) <span class="tag tag-functional">FUNCTIONAL</span></h3>
+            <p>Performance reviews occur but lack consistency. Improvement ownership exists but lacks reinforcement. Improvements are incorporated but not always systematically. Improvement processes hold at current scale but strain under growth. Performance trends are reviewed intermittently. Performance holds but requires active transition effort.</p>
+            <div class="callout consequence"><strong>Operational Consequence</strong><br>Operational improvements occur periodically but depend on active effort. Learning cycles exist but are not yet fully embedded into routine operations.</div>
+            <div class="callout risk"><strong>Structural Risk</strong><br>As onboarding complexity grows, improvement cycles may lag behind operational change.</div>
+        </section>
+
+        <section class="section">
+            <h2>Structural Pattern Snapshot</h2>
+            <ul>
+                <li>ICI Score: 49</li>
+                <li>Model Version: PDL-ICI-1.0.0</li>
+                <li>Weakest Control: Staff Acceleration (-10)</li>
+                <li>Hero Dependence Signal: None</li>
+                <li>Diagnostic Confidence: 60 (High Confidence)</li>
+                <li>Strongest Control: Process Definition (10)</li>
+                <li>Structural Asymmetry: 20</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Diagnostic Terms</h2>
+            <p><strong>Hero Dependence</strong> — A structural condition where operational outcomes rely on individual expertise rather than governed systems or documented processes.</p>
+            <p><strong>Structural Asymmetry</strong> — A condition where operational controls are unevenly developed, allowing strong delivery capabilities to operate without equally strong governance or visibility.</p>
+            <p><strong>Infrastructure Control Integrity (ICI)</strong> — A normalized score representing the structural health and balance of onboarding operational controls.</p>
+            <p><strong>Diagnostic Confidence</strong> — An index indicating the structural stability of the diagnostic result.</p>
+        </section>
+
+        <section class="section">
+            <h2>About This Diagnostic</h2>
+            <p>This assessment evaluates the structural controls governing onboarding delivery.</p>
+            <p>It measures system design, governance, and operational reliability.</p>
+            <p>It does not evaluate individual employee performance, customer sentiment, or product quality.</p>
+            <p>The Infrastructure Control Integrity (ICI) score reflects the durability and scalability of onboarding infrastructure rather than current customer satisfaction.</p>
+            <p>Onboarding outcomes are shaped by infrastructure. This diagnostic measures that infrastructure.</p>
+        </section>
+
+        <section class="section">
+            <h2>Infrastructure Capacity Index (ICI) Scale</h2>
+            <ul>
+                <li>0-29 — Structurally Fragile</li>
+                <li>30-44 — Below Functional Baseline</li>
+                <li class="scale-highlight">45-55 — Functional Baseline</li>
+                <li>56-69 — Emerging Stability</li>
+                <li>70-85 — Structurally Stable</li>
+                <li>86-100 — Compounding Infrastructure</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>About Plan → Do → Launch</h2>
+            <p>Plan → Do → Launch designs onboarding infrastructure that replaces personality-dependent execution with governed, scalable operating systems.</p>
+            <p>Contact: <a href="mailto:info@plandolaunch.com">info@plandolaunch.com</a><br>Schedule a discovery call: <a href="https://calendly.com/jmcdonald-consultant/discovery-call" target="_blank" rel="noopener noreferrer">Book a Meeting</a></p>
+            <p>© 2026 Plan Do Launch<br><a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms-of-use.html">Terms of Use</a> | <a href="/contact.html">Contact</a></p>
+        </section>
+    </main>
+</body>
+</html>
