@@ -11,6 +11,14 @@ Latest work summary
 - **Key fixes applied:** added a custom `404.html`; updated internal links to use extensionless (clean) URLs; restored and rebuilt `assets/css/styles.min.css`; ensured Cloudflare cache was purged so new assets serve correctly.
 - **Assessment behavior preserved:** `assets/js/assessment.js` remains the canonical script for the assessment flow. Keep the DOM hooks `.assessment-answer`, `.assessment-input` and `#report` unchanged — they are used by the scripts.
 
+Release notes
+- Full notes: `RELEASE_NOTES.md`
+- Latest release highlights:
+  - Added a static onboarding diagnostic sample report: `assessment/onboarding-diagnostic-sample.html`
+  - Added chart source page used by the report: `assessment/chart.html`
+  - Added a homepage Founder Credibility link to the sample report: `index.html`
+  - Added release/support docs and assets for this rollout (`README.md`, `RELEASE_NOTES.md`, assessment image/favicon assets)
+
 Where to look (important files)
 - `assessment/` — pages: `index.html`, `section-one.html` … `section-five.html`, `complete.html`
 - `assets/js/assessment.js` — persistence, report rendering, and submission to the assessment API.
